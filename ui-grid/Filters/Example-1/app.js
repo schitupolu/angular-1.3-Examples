@@ -1,4 +1,4 @@
-var app = angular.module('app', ['ngTouch', 'ui.grid', 'resizeGrid']);
+var app = angular.module('app', ['ngTouch', 'ui.grid']);
 
 app.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     var today = new Date();
