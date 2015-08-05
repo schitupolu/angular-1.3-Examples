@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/ui-grid/ui-grid.min.js"></script>
+
+    <link rel="stylesheet" href="bower_components/ui-grid/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+
+<div ng-controller="MainCtrl">
+    <input ng-model='filterValue' placeholder="Search..." ng-change="refreshData()"/>
+
+    <div id="grid1" ui-grid="gridOptions" class="grid" resize-grid></div>
+</div>
+
+<!-- app.js -->
+<script src="app.js"></script>
+<!-- Resize Grid -->
+<script src="uiGridResize.js"></script>
+</body>
+</html>
