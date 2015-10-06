@@ -17,7 +17,6 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
             link: function ($scope, $elm, $attrs) {
                 $elm.on('change', function (changeEvent) {
                     var reader = new FileReader();
-
                     reader.onload = function (evt) {
                         $scope.$apply(function () {
                             var data = evt.target.result;
