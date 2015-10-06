@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.js"></script>
+    <script src="http://ui-grid.info/release/ui-grid.js"></script>
+    <link rel="stylesheet" href="http://ui-grid.info/release/ui-grid.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+
+<div ng-controller="MainCtrl as vm">
+    <button type="button" class="btn btn-success" ng-click="vm.reset()">Reset Grid</button>
+    <br/>
+    <br/>
+
+    <div id="grid1" ui-grid="vm.gridOptions" class="grid">
+        <div class="grid-msg-overlay" ng-show="!vm.gridOptions.data.length">
+            <div class="msg">
+                <div class="center">
+                    <span class="muted">Select Spreadsheet File</span>
+                    <br/>
+                    <input type="file" accept=".csv" fileread="" opts="vm.gridOptions" multiple="false"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- app.js -->
+<script src="app.js"></script>
+<script src="csv.min.js"></script>
+</body>
+</html>
